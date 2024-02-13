@@ -1,0 +1,276 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: poppins, sans-serif;
+}
+
+section {
+position: relative;
+width: 100%;
+min-height: 100vh;
+padding: 100px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+background: #fff;
+}
+header {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+padding: 20px 100px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+header .logo {
+position: relative;
+max-width: 80px;
+
+}
+header ul {
+  position: relative;
+  display: flex;
+}
+header ul li {
+  list-style: none;
+}
+header ul li a {
+display: inline-block;
+color: #2c2c2c;
+font-weight: 450;
+margin-left: 60px;
+text-decoration: none;
+transition: .3s;
+font-size: 20px;
+}	
+header ul li a:hover {
+  color: #017143;
+}
+
+.content {
+  position: relative;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content .textBox {
+  position: relative;
+  max-width: 600px;
+}
+.content .textBox h2 {
+  font-size: 4em;
+  color: #333;
+  line-height: 1.4em;
+  font-weight: 500;
+}
+.content .textBox h2 span {
+  color: #017143;
+  font-size: 1.2em;
+  font-weight: 900;
+}
+.content .textBox p {
+  color: #333;
+}
+.content .textBox a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 20px;
+  background: #017143;
+  color: #fff;
+border-radius: 40px;
+font-weight: 500;
+letter-spacing: 1px;
+text-decoration: none;
+}
+.content .imgBox {
+width: 600px;
+display: flex;
+justify-content: flex-end;
+padding-right: 50px;
+margin-top: 50px;
+
+}
+.content .imgBox img {
+max-width: 340px;
+}
+
+.thumb {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  display: flex;
+}
+.thumb li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  cursor: pointer;
+  transition: 0.6s;
+}
+.thumb li:hover {
+  transform: translateY(-15px);
+}
+
+.thumb li img {
+  max-width: 60px;
+
+}
+.sci {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li {
+  list-style: none;
+  margin: 10px 0;}
+.sci li a {
+  display: inline-block;
+  margin: 5px 0;
+  transform: scale(0.5);
+  filter: invert(1);
+}
+.sci li a:hover {
+  transform: scale(0.6);
+  color: #017143;
+}
+.circle {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #017143;
+  clip-path: circle(600px at right 800px);
+  transition: 0.5s;
+}
+@media (max-width: 1000px) {
+  section {
+    padding: 100px 50px;
+  }
+  header {
+    padding: 20px 50px;
+  }
+  header .logo {
+    max-width: 60px;
+  }
+  header ul li a {
+    margin-left: 40px;
+    font-size: 18px;
+  }
+  .content {
+    flex-direction: column;
+  }
+  .content .textBox {
+    max-width: 100%;
+    text-align: center;
+  }
+  .content .textBox h2 {
+    font-size: 3em;
+  }
+  .content .textBox p {
+    margin-top: 20px;
+  }
+  .content .imgBox {
+    max-width: 100%;
+    justify-content: center;
+    padding-right: 0;
+    margin-top: 50px;
+  }
+  .content .imgBox img {
+    max-width: 300px;
+  }
+  .thumb {
+    position: relative;
+    bottom: 0;
+    margin-top: 50px;
+  }
+  .sci {
+    position: relative;
+    top: 0;
+    right: 0;
+    transform: translateY(0);
+    margin-top: 50px;
+  }
+  .circle {
+    clip-path: circle(300px at right 800px);
+  }
+}
+@media (max-width: 600px) {
+  section {
+    padding: 100px 20px;
+  }
+  header {
+    padding: 20px 20px;
+  }
+  header ul li a {
+    margin-left: 20px;
+    font-size: 16px;
+  }
+  .content .textBox h2 {
+    font-size: 2.5em;
+  }
+  .content .imgBox img {
+    max-width: 250px;
+  }
+  .thumb {
+    display: none;
+  }
+  .sci {
+    display: none;
+  }
+  .circle {
+    clip-path: circle(200px at right 800px);
+  }
+}
+@media (max-width: 400px) {
+  .content .textBox h2 {
+    font-size: 2em;
+  }
+  .content .textBox p {
+    font-size: 14px;
+  }
+  .content .imgBox img {
+    max-width: 200px;
+  }
+  .circle {
+    clip-path: circle(150px at right 800px);
+  }
+}
+@media (max-width: 300px) {
+  .content .textBox h2 {
+    font-size: 1.5em;
+  }
+  .content .textBox p {
+    font-size: 12px;
+  }
+  .content .imgBox img {
+    max-width: 150px;
+  }
+  .circle {
+    clip-path: circle(100px at right 800px);
+  }
+}
+@media (max-width: 200px) {
+  .content .textBox h2 {
+    font-size: 1.2em;
+  }
+  .content .textBox p {
+    font-size: 10px;
+  }
+  .content .imgBox img {
+    max-width: 100px;
+  }
+  .circle {
+    clip-path: circle(50px at right 800px);
+  }
+}
